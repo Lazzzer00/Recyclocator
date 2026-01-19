@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:recyclocator2/article_page.dart'
+import 'package:recyclocator2/map_page.dart'
 
 void main() {
   runApp(MyApp());
@@ -27,8 +29,8 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    HomePage(),
-    AboutPage(),
+    ArticlePage(),
+    MapPage(),
     ContactPage(),
   ];
 
@@ -66,57 +68,6 @@ class _MainScreenState extends State<MainScreen> {
   }
 }
 
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Home',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Ovo je aplikacija racunarskog smjera nase skole.',
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class AboutPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'About',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Uglavnom se bavimo programiranjem i bazama podataka. Malo racunarskim mrezama. Obozavamo Word i PowerPoint.',
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
 class ContactPage extends StatelessWidget {
   @override
