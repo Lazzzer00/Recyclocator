@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:recyclocator3/article_data.dart';
-import 'package:recyclocator3/article_detail_page.dart';
+import 'package:recyclocator2/article_data.dart';
+import 'package:recyclocator2/article_detail_page.dart';
 
 class ArticleCard extends StatelessWidget {
   final Article article;

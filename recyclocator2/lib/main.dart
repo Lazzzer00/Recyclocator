@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:recyclocator2/article_page.dart'
-import 'package:recyclocator2/map_page.dart'
+import 'package:recyclocator2/article_page.dart';
+import 'package:recyclocator2/map_page.dart';
 
 void main() {
   runApp(MyApp());

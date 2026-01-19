@@ -49,6 +49,10 @@ class _ArticlePageState extends State<ArticlePage> {
     }
 
     Widget build(BuildContext context) {
+      if (_loading) {
+        return const Center(child: CircularProgressIndicator());
+      }
+      
       return Scaffold(
         appBar: AppBar(
           title: Text('Article Page'),

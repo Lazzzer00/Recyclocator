@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recyclocator3/article_data.dart';
+import 'package:recyclocator2/article_data.dart';
 
 class ArticleDetailPage extends StatelessWidget {
   final Article article;
