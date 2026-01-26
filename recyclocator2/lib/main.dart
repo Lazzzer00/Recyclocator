@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:recyclocator2/article_page.dart';
 import 'package:recyclocator2/map_page.dart';
+import 'package:recyclocator2/form_page.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -31,7 +34,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _pages = [
     ArticlePage(),
     MapPage(),
-    ContactPage(),
+    FormPage(),
   ];
 
   @override
@@ -63,33 +66,6 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Contact',
           ),
         ],
-      ),
-    );
-  }
-}
-
-
-class ContactPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Contact',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Kontaktirajte nas preko Boskovog Linkedina.',
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          ],
-        ),
       ),
     );
   }
