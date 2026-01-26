@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';		//flutter ima ugradjen library za make
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:http/http.dart' as http;
 
 class MapPage extends StatefulWidget {
@@ -17,11 +17,11 @@ class _MapPageState extends State<MapPage> {
   void initState() {
     super.initState();
     _fetchMarkers();
-  } 
+  }
 
   Future<void> _fetchMarkers() async {
     final response = await http.get(
-      Uri.parse('https://lokacije.gimnazija.net/api/locations'),    //ovo je link sa kojeg dobijamo pozicije pinova, sa servera
+      Uri.parse('https://lokacije.gimnazija.net/api/locations'),
     );
 
     if (response.statusCode == 200) {
@@ -31,6 +31,10 @@ class _MapPageState extends State<MapPage> {
         return Marker(
           markerId: MarkerId('${item['lat']}_${item['lng']}'),
           position: LatLng(item['lat'], item['lng']),
+          infoWindow: InfoWindow(
+            title: item['material'],   // type of material to be recycled
+            snippet: item['address'],  // address
+          ),
         );
       }).toSet();
 
@@ -48,12 +52,14 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     if (_loading) {
-      return const Center(child: CircularProgressIndicator());
+      return const Center(
+        child: CircularProgressIndicator(color: Colors.green),
+      );
     }
 
     return GoogleMap(
       initialCameraPosition: const CameraPosition(
-        target: LatLng(44.733, 18.098), // Pocetna pozicija mape, ovo su otprilike koordinate doboja
+        target: LatLng(44.733, 18.098),
         zoom: 7,
       ),
       markers: _markers,
