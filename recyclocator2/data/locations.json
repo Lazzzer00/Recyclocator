@@ -1,0 +1,38 @@
+[
+  {
+    "lat": 44.730609,
+    "lng": 18.084922,
+    "material": "Staklo",
+    "address": "Cara Dušana 11, Doboj"
+  },
+  {
+    "lat": 44.727079,
+    "lng": 18.085152,
+    "material": "Baterije",
+    "address": "Celjska 33, Doboj"
+  },
+  {
+    "lat": 44.731733,
+    "lng": 18.087471,
+    "material": "Papir",
+    "address": "Kralja Petra I, Doboj"
+  },
+  {
+    "lat": 44.735060,
+    "lng": 18.085869,
+    "material": "Metal",
+    "address": "Karađorđeva, Doboj"
+  },
+  {
+    "lat": 44.731889,
+    "lng": 18.082641,
+    "material": "Kompost",
+    "address": "Hilandarska, Doboj"
+  },
+  {
+    "lat": 44.735063,
+    "lng": 18.090210,
+    "material": "Plastika",
+    "address": "Kralja Dragutina, Doboj"
+  }
+]
