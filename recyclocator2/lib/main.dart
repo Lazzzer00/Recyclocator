@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:recyclocator2/article_page.dart';
 import 'package:recyclocator2/map_page.dart';
 import 'package:recyclocator2/form_page.dart';
+import 'package:recyclocator2/contact_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Multi-Page Flutter App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: const Color(0xFF25995C),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MainScreen(),
@@ -32,6 +33,7 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
+    ContactPage(),
     ArticlePage(),
     MapPage(),
     FormPage(),
@@ -46,6 +48,8 @@ class _MainScreenState extends State<MainScreen> {
       ),
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: const Color(0xFF25995C),
+        unselectedItemColor: Colors.grey,
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
@@ -53,6 +57,9 @@ class _MainScreenState extends State<MainScreen> {
           });
         },
         items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.phone)
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -64,9 +71,10 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.contact_mail),
             label: 'Contact',
-          ),
+          )
         ],
       ),
     );
   }
 }
+
