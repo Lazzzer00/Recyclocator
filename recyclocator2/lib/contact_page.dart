@@ -30,6 +30,14 @@ class ContactPage extends StatelessWidget {
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyMedium,
             ),
+
+            const SizedBox(height: 24),
+
+            Text(
+              'Recyclocator je aplikacija koja pomaže korisnicima da pronađu reciklažne lokacije, čitaju edukativne članke o ekologiji i reciklaži, i prijave nove lokacije za reciklažu slanjem fotografija i informacija. Cilj aplikacije je da olakša pravilno odlaganje otpada i doprinese očuvanju životne sredine.',
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
           ],
         ),
       ),
