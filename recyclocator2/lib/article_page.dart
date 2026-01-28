@@ -22,7 +22,7 @@ class _ArticlePageState extends State<ArticlePage> {
 
   Future<void> _fetchArticles() async {
     final response = await http.get(
-      Uri.parse("link"),
+      Uri.parse("https://recyclocator.gimnazija.net/api/articles"),
     );
 
     if (response.statusCode == 200) {
